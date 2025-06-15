@@ -1,3 +1,16 @@
-1. create structure folder src dan sub foldernya secara manual
-2. npm init
+referensi
+https://github.com/zhanang19/fsd-bootcamp-expressjs/blob/v1/src/routes/router.js
 
+1. create structure folder 'src' dan sub foldernya secara manual
+2. jalankan: npm init (package.json dihasilkan dari proses ini, buat manual jika blm ada)
+3. tambahkan dependencies dan devdependencies
+npm i express dotenv
+npm i -D nodemon
+4. tambahkan pada package.json
+"scripts": {
+    "dev": "nodemon src/index.js --watch src/ --watch package.json --watch .env"
+    "start": "node src/index.js"
+  },
+
+5. modif index.js
+6.

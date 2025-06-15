@@ -1,0 +1,6 @@
+client -> entry point -> router -> controller
+controller -> entry point
+controller -> 
+
+router: mengarahkan ke controller
+controller: bisnis logic ketika request masuk
