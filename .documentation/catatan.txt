@@ -5,3 +5,14 @@ node index.js
 maka hasil:
 process.argv[0] adalah node
 process.argv[1] adalah index.js
+
+
+--------------------------------------
+
+
+dotenv untuk membaca file .env
+
+
+---------------------------------
+
+pada package, script dipakai dalam "npm run ..."

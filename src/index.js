@@ -1,8 +1,8 @@
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:2186922291.
+const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "../.env") });
+
 const express = require('express');
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:2830552266.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:475669188.
-const router = require('./routes/routes');
+const router = require('./routes/router');
 
 const app = express();
 

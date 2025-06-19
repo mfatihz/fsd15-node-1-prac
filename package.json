@@ -1,14 +1,23 @@
 {
-  "name": "risenode1",
+  "name": "fsd15-node-1-prac",
   "version": "1.0.0",
   "description": "Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!",
+  "homepage": "https://github.com/mfatihz/fsd15-node-1-prac#readme",
+  "bugs": {
+    "url": "https://github.com/mfatihz/fsd15-node-1-prac/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfatihz/fsd15-node-1-prac.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js --watch src/ --watch package.json --watch .env",
     "start": "node src/index.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0"

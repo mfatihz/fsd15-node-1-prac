@@ -2,15 +2,50 @@ referensi
 https://github.com/zhanang19/fsd-bootcamp-expressjs/blob/v1/src/routes/router.js
 
 1. create structure folder 'src' dan sub foldernya secara manual
-2. jalankan: npm init (package.json dihasilkan dari proses ini, buat manual jika blm ada)
+
+2. jalankan: npm init (menghasilkan package.json, buat manual jika blm ada)
+
 3. tambahkan dependencies dan devdependencies
 npm i express dotenv
 npm i -D nodemon
+
 4. tambahkan pada package.json
 "scripts": {
-    "dev": "nodemon src/index.js --watch src/ --watch package.json --watch .env"
+    "dev": "nodemon src/index.js --watch src/ --watch package.json --watch .env",
     "start": "node src/index.js"
   },
 
-5. modif index.js
-6.
+5. buat file .env
+SERVER_PORT=3000
+
+5. buat src/index.js
+const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "../.env") });
+
+const express = require('express');
+const router = require('./routes/router');
+
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use("/", router);
+
+app.listen(process.env.SERVER_PORT || 3000, () => {
+  console.log("Server Running");
+});
+
+6. buat src/routes/router.js
+const express = require("express");
+
+const router = express.Router();
+
+router.get("/", function (req, res) {
+  res.send({
+    serverMessage: "Hello World!",
+    serverTime: new Date(),
+  });
+});
+
+module.exports = router;
